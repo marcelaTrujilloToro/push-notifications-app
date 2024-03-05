@@ -1,0 +1,29 @@
+{
+  "project_info": {
+    "project_number": "457993027386",
+    "project_id": "flutter-proyects-b8f31",
+    "storage_bucket": "flutter-proyects-b8f31.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:457993027386:android:d5776356fc6cf2794b1a03",
+        "android_client_info": {
+          "package_name": "com.marcelatrujillo.push_app"
+        }
+      },
+      "oauth_client": [],
+      "api_key": [
+        {
+          "current_key": "AIzaSyDlIjQkBM7CmjViqsgQimRAbC4pKO5bATs"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": []
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
