@@ -1,10 +1,18 @@
+# para obtener el barer token de firebase con el pryecto de node
+GET localhost:3000
+
+###
+
+# no es lo recomendado usar esta forma pero es muy sencilla
 POST https://fcm.googleapis.com/fcm/send
 
 Content-Type: application/json
-Authorization: key=AAAAaqKC_zo:APA91bH7JSr66c29DfxHHWFZNqwt6rwKfiUgnTlr0L76VNSi2fgfXBHmdxkUYeSDjqwv3exaEI5zygQ1wXmqZ1EUr4LkIqOQ0WR6JLXhUI0_bmDFieO1p8VDzHVrHCj5DJaKZCTy2-S0
+# Authorization: key de firebase
+Authorization: 
 
+    # to: el identificador del dispositivo
 {
- "to" : "dINYNsAgSnCF9u_1SFiE5i:APA91bGHhjYw3OyXOeMhEnaix0ugBZJjLYD4vjJ01l1JlET3WXUJVDEPENA84QP8i0viNaM-YcZcdiICDfU0-cLU4yBJIptV92QOJyOgQkvyluhzQ60DuV0B3ud3XRjRUNr4_YBgaycO",
+ "to" : "",
  "notification" : {
      "body" : "Desde Rest client visual",
      "title": "Hola mundo"
@@ -16,4 +24,36 @@ Authorization: key=AAAAaqKC_zo:APA91bH7JSr66c29DfxHHWFZNqwt6rwKfiUgnTlr0L76VNSi2
      "key_2" : "Value for key_2"
  }
 }
-# no es lo recomendado usar esta forma pero es muy sencilla
+
+###
+# forma recomenda (se recomienda mejor utilizar el sdk de firebase)
+# projects/nombre del proyecto
+
+POST https://fcm.googleapis.com/v1/projects/flutter-proyects-b8f31/messages:send
+
+Content-Type: application/json
+# Authorization: el bearer token que salio del get a localhost
+Authorization: Bearer ya29.ElqKBGN2Ri_Uz...HnS_uNreA
+
+# token: del dispositivo
+{
+   "message":{
+      "token":"",
+      "data":{
+        "hola": "mundo",
+        "hello": "world"
+      },
+      "notification":{
+        "title":"FCM Message",
+        "body":"This is an FCM notification message!"
+      },
+      "android": {
+        "notification": {
+          "image": "https://cdn.pixabay.com/photo/2018/02/21/05/17/cat-3169476_1280.jpg"
+        }
+      }
+   }
+}
+
+
+
