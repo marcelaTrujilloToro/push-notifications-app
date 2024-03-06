@@ -1,0 +1,19 @@
+POST https://fcm.googleapis.com/fcm/send
+
+Content-Type: application/json
+Authorization: key=AAAAaqKC_zo:APA91bH7JSr66c29DfxHHWFZNqwt6rwKfiUgnTlr0L76VNSi2fgfXBHmdxkUYeSDjqwv3exaEI5zygQ1wXmqZ1EUr4LkIqOQ0WR6JLXhUI0_bmDFieO1p8VDzHVrHCj5DJaKZCTy2-S0
+
+{
+ "to" : "dINYNsAgSnCF9u_1SFiE5i:APA91bGHhjYw3OyXOeMhEnaix0ugBZJjLYD4vjJ01l1JlET3WXUJVDEPENA84QP8i0viNaM-YcZcdiICDfU0-cLU4yBJIptV92QOJyOgQkvyluhzQ60DuV0B3ud3XRjRUNr4_YBgaycO",
+ "notification" : {
+     "body" : "Desde Rest client visual",
+     "title": "Hola mundo"
+ },
+ "data" : {
+     "body" : "Body of Your Notification in Data",
+     "title": "Title of Your Notification in Title",
+     "key_1" : "Value for key_1",
+     "key_2" : "Value for key_2"
+ }
+}
+# no es lo recomendado usar esta forma pero es muy sencilla
